@@ -1,7 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+//*
+*Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+*Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+*/
 package GUI;
 
 import GUI.ViewStudents;
@@ -42,6 +42,7 @@ public class InstructorBoard extends javax.swing.JFrame {
         course = new java.awt.Button();
         view = new java.awt.Button();
         jButton1 = new javax.swing.JButton();
+        jButtonLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +82,14 @@ public class InstructorBoard extends javax.swing.JFrame {
             }
         });
 
+        jButtonLogout.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButtonLogout.setText("Logout");
+        jButtonLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogoutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -88,11 +97,14 @@ public class InstructorBoard extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addContainerGap(137, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(31, 31, 31))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout
+                                                .createSequentialGroup()
+                                                .addComponent(jButtonLogout, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(31, 31, 31))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
                                                 jPanel1Layout.createSequentialGroup()
                                                         .addComponent(view, javax.swing.GroupLayout.PREFERRED_SIZE, 232,
@@ -120,8 +132,11 @@ public class InstructorBoard extends javax.swing.JFrame {
                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126,
                                         Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButtonLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap()));
 
         course.getAccessibleContext().setAccessibleName("view");
@@ -146,7 +161,7 @@ public class InstructorBoard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void courseActionPerformed(java.awt.event.ActionEvent evt) {
+    private void courseActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_courseActionPerformed
         // Add null check
         if (i == null) {
             javax.swing.JOptionPane.showMessageDialog(this,
@@ -161,7 +176,7 @@ public class InstructorBoard extends javax.swing.JFrame {
         clm.setVisible(true);
     }// GEN-LAST:event_courseActionPerformed
 
-    private void viewActionPerformed(java.awt.event.ActionEvent evt) {
+    private void viewActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_viewActionPerformed
         this.setVisible(false);
         ViewStudents v = new ViewStudents(i);
         v.setVisible(true);
@@ -171,6 +186,19 @@ public class InstructorBoard extends javax.swing.JFrame {
         System.exit(0);
     }// GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButtonLogoutActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButtonLogoutActionPerformed
+        int confirm = javax.swing.JOptionPane.showConfirmDialog(
+                this,
+                "Are you sure you want to logout?",
+                "Confirm Logout",
+                javax.swing.JOptionPane.YES_NO_OPTION);
+
+        if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+            this.dispose();
+            new Login().setVisible(true);
+        }
+    }// GEN-LAST:event_jButtonLogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,6 +206,7 @@ public class InstructorBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button course;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonLogout;
     private javax.swing.JPanel jPanel1;
     private java.awt.Label title;
     private java.awt.Button view;
