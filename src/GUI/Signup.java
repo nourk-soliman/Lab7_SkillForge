@@ -381,22 +381,23 @@ public class Signup extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Signup().setVisible(true));
-}
+    }
 
-// Variables declaration - do not modify//GEN-BEGIN:variables
-private javax.swing.JButton bexit;
-private javax.swing.JButton blogin;
-private javax.swing.JButton bsignup;
-private javax.swing.JLabel jLabel1;
-private javax.swing.JLabel jLabel2;
-private javax.swing.JLabel jLabel3;
-private javax.swing.JLabel jLabel4;
-private javax.swing.JLabel jLabel5;
-private javax.swing.JLabel jLabel6;
-private javax.swing.JPanel jPanel1;
-private javax.swing.JTextField jemail;
-private javax.swing.JPasswordField jpassword;
-private javax.swing.JCheckBox jshowpassword;
-private javax.swing.JTextField jusername;
-private javax.swing.JComboBox<String> lchoices;
-// End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bexit;
+    private javax.swing.JButton blogin;
+    private javax.swing.JButton bsignup;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jemail;
+    private javax.swing.JPasswordField jpassword;
+    private javax.swing.JCheckBox jshowpassword;
+    private javax.swing.JTextField jusername;
+    private javax.swing.JComboBox<String> lchoices;
+    // End of variables declaration//GEN-END:variables
+}
