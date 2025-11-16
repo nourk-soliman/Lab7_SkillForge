@@ -23,8 +23,17 @@ public class Instructor extends User  {
     createdCourses=new ArrayList<>();
     
     }
+    
+   
     public Instructor(){}
     
+    @Override
+    public void setUserId(int id)
+    {JsonUserReader r=new JsonUserReader("users.json");
+    List<Instructor>i=r.getInstructors();
+    for(Instructor instructor:i)
+    {if(instructor.getUserId()==id) {System.out.println("User ID must be unique."); return;}}
+        super.setUserId(id);}
 
     
  
