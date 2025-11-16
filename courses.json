@@ -1,56 +1,44 @@
 [
-    {
-        "courseId": "CS101",
-        "title": "Python",
-        "description": "An introductory course to Python programming.",
-        "instructorId": 9657,
-        "lessons": [
-            {
-                "lessonId": "py1",
-                "title": "How to start python",
-                "content": "This lesson covers the basics of getting started with Python, including installation and writing your first program.",
-                "optional resources": [
-                    "https://www.python.org/about/gettingstarted/",
-                    "https://realpython.com/python-first-steps/"
-                ]
-            },
-            {
-                "lessonId": "py2",
-                "title": "Data types and variables",
-                "content": "This lesson explains the different data types in Python and how to use variables to store data.",
-                "optional resources": [
-                    "https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator",
-                    "https://www.w3schools.com/python/python_variables.asp"
-                ]
-            }
-        ],
-        "Students": [1234,3456]
-    },
-    {
-        "courseId": "DR202",
-        "title": "Learn how to drive",
-        "description": "A comprehensive course on driving skills and road safety.",
-        "instructorId": 9657,
-        "lessons": [
-            {
-                "lessonId": "ds1",
-                "title": "Learn the road signs",
-                "content": "This lesson introduces the various road signs and their meanings to ensure safe driving.",
-                "optional resources": [
-                    "https://www.dmv.org/learn-to-drive/road-signs.php",
-                    "https://www.safedrivingforlife.info/road-signs"
-                ]
-            },
-            {
-                "lessonId": "dt1",
-                "title": "Basic driving techniques",
-                "content": "This lesson covers fundamental driving techniques including steering, braking, and parking.",
-                "optional resources": [
-                    "https://www.driving-tests.org/beginner-driving-tips/",
-                    "https://www.nhtsa.gov/road-safety/driver-safety"
-                ]
-            }
-        ],
-        "Students": [ 3456]
-    }
-] 
+  {
+    "courseId": "dsf",
+    "title": "dfs",
+    "instructorId": 4398,
+    "description": "fsd",
+    "lessons": [
+      {
+        "lessonId": "fsdsfd",
+        "title": "fdssdf",
+        "content": "sdfsdffds",
+        "optionalResources": [
+          "sdfsfd"
+        ]
+      }
+    ],
+    "students": []
+  },
+  {
+    "courseId": "dsa",
+    "title": "asd",
+    "instructorId": 4398,
+    "description": "asd",
+    "lessons": [],
+    "students": []
+  },
+  {
+    "courseId": "sdffsdfsd",
+    "title": "fdssdfsd",
+    "instructorId": 456,
+    "description": "sdfsdfsdf",
+    "lessons": [
+      {
+        "lessonId": "sdffdsdsf",
+        "title": "dsfsdffds",
+        "content": "sdfdfsdsf",
+        "optionalResources": [
+          "dfsdfsfds"
+        ]
+      }
+    ],
+    "students": []
+  }
+]
