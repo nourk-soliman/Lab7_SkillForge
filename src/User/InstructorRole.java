@@ -4,7 +4,7 @@
  */
 package User;
 
-import Courses.Course;
+import User.*;
 import Json.JsonUserReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +14,18 @@ import java.util.List;
  * @author Nour
  */
 public class InstructorRole {
-   List<Instructor>instructors;
-   JsonUserReader r =new JsonUserReader("users.json");
-    public void loadInstructors()
-    {
-    instructors=r.getInstructors();}
+   
+   
+    public List<Student> viewEnrolledStudents(Instructor i)
+   {JsonUserReader r =new JsonUserReader("users.json");
+    List<Student> temp=r.getStudents();
+   List<Student> result=new ArrayList<>();
+   for(Student student: temp)
+   {
+   for(String enrolledCourse: student.getEnrolledCourses() )
+   {if(i.getCreatedCourses().contains(enrolledCourse))
+   result.add(student); break;}}
+   return result;  }
     
     
     

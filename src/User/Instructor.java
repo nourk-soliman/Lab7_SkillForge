@@ -25,17 +25,7 @@ public class Instructor extends User  {
     }
     public Instructor(){}
     
-        
-   public List<Student> viewEnrolledStudents()
-   {JsonUserReader r =new JsonUserReader("users.json");
-    List<Student> temp=r.getStudents();
-   List<Student> result=new ArrayList<>();
-   for(Student student: temp)
-   {
-   for(String enrolledCourse: student.getEnrolledCourses() )
-   {if(createdCourses.contains(enrolledCourse))
-   result.add(student); break;}}
-   return result;  }
+
     
  
     public List<String> getCreatedCourses() {
@@ -58,7 +48,7 @@ public class Instructor extends User  {
    
   
  
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int k=0;
         JsonUserReader r=new JsonUserReader("users.json");
       List<Instructor> i=r.getInstructors();
@@ -68,7 +58,7 @@ public class Instructor extends User  {
       for(Student student:s )
       {student.displayInfo();
           System.out.println(k++);
-   }
+   }*/
         
     }
-}
+
