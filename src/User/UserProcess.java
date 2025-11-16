@@ -36,7 +36,8 @@ public class UserProcess extends Database<User> {
             for (byte b : hashBytes) {
                 hex.append(String.format("%02x", b));
             }
-            hashedPassword = hex.toString();  // Assign value
+            hashedPassword = hex.toString(); 
+            System.out.println("password"+ hashedPassword);// Assign value
         } catch (Exception e) {
             throw new RuntimeException("Error hashing password", e);
         }
@@ -52,12 +53,15 @@ public class UserProcess extends Database<User> {
                 break;
             }
         }
+        System.out.println("The username is"+ st.getUserName());
         if (st == null) {
             return null;
         }
 
         if (!isValidPassword(password, st.getPasswordHash())) {
+            System.out.println("Couldnt get password");
             return null;
+            
         } else {
             return st;
         }
@@ -143,9 +147,6 @@ public class UserProcess extends Database<User> {
             users.addAll(students);
             users.addAll(instructors);
             System.out.println("Done here");
-            for(Student student : students){
-                student.displayInfo();
-            }
             return users;
         }
 
