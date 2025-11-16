@@ -1,5 +1,4 @@
 package Database;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ public abstract class Database<T> {
     // Abstract methods that subclasses must implement
     protected abstract List<T> loadFromFile();
     protected abstract String getItemName(T item);
-    protected abstract int getItemId(T item);
+    protected abstract String getItemId(T item);
     protected abstract void saveToFile(List<T> items);
     
     private void loadItems() {
@@ -31,15 +30,14 @@ public abstract class Database<T> {
         saveToFile(items);
     }
 
-    public T getItemById(int id) {//getitem by only ID
-        for (T item : items) {
-            if (getItemId(item) == id) {
-                return item;
-            }
+    public T getItemById(String id) {
+    for (T item : items) {
+        if (getItemId(item).equalsIgnoreCase(id)) {
+            return item;
         }
-        return null;
     }
-
+    return null;
+}
     public T getItemByName(String name) {//get an item by only name//
         for (T item : items) {
             if (getItemName(item).equalsIgnoreCase(name)) {
@@ -49,13 +47,11 @@ public abstract class Database<T> {
         return null;
     }
 
-    public boolean itemExistsById(int id) {
+    public boolean itemExistsById(String id) {
         return getItemById(id) != null;
     }
 
     public boolean itemExistsByName(String name) {// to check if item exits using name//
         return getItemByName(name) != null;
     }
-    
 }
-
