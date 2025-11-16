@@ -17,6 +17,7 @@ import GUI.InstructorBoard;
  * @author Nour
  */
 public class ViewStudents extends javax.swing.JFrame {
+    private Instructor i;
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ViewStudents.class.getName());
 
@@ -90,7 +91,7 @@ public class ViewStudents extends javax.swing.JFrame {
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
       this.setVisible(false);
-      new InstructorBoard().setVisible(true);
+      new InstructorBoard(i).setVisible(true);
       
     }//GEN-LAST:event_button1ActionPerformed
     public void viewStudents(Instructor i)
@@ -108,35 +109,7 @@ public class ViewStudents extends javax.swing.JFrame {
     
     
     }
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-     JsonUserReader r=new JsonUserReader("users.json");
-        List<Instructor>i=r.getInstructors();
- java.awt.EventQueue.invokeLater(() -> {
-        ViewStudents v = new ViewStudents(i.get(1));   // create ONE instance
-        v.setVisible(true);                     // show THAT instance
-    });       
-        
-       
-        
-    }
+    
 
     /**
      * @param args the command line arguments
