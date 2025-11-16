@@ -1,34 +1,136 @@
 [
   {
+    "enrolledCourses": [
+      "CS101",
+      "WEB301"
+    ],
     "userId": 1234,
-    "role": "student",
     "username": "Salma",
     "email": "mss12@gmail.com",
     "passwordHash": "5a4d474b95334409d44496e503ed517b99f622231172fa6eaee5b3d0468f72f1",
-    "enrolledCourses": ["CS101"],
-    "progress": {
-      "CS101": ["py1"]
-    }
+    "role": "student"
   },
   {
+    "enrolledCourses": [
+      "CS101",
+      "DR202",
+      "DB401"
+    ],
     "userId": 3456,
-    "role": "student",
     "username": "Samer",
     "email": "samer123@gmail.com",
     "passwordHash": "2c74fd17edafd80e8447b0d46741ee243b7eb74dd2149a0f0eea5c9f0f8e5a3c",
-    "enrolledCourses": ["CS101", "DR202"],
-    "progress": {
-      "CS101": ["py1"],
-      "DR202": ["ds1"]
-    }
+    "role": "student"
   },
   {
+    "enrolledCourses": [
+      "WEB301",
+      "DB401",
+      "ML501"
+    ],
+    "userId": 5678,
+    "username": "Nour",
+    "email": "nour.k@gmail.com",
+    "passwordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "role": "student"
+  },
+  {
+    "enrolledCourses": [
+      "CS101",
+      "WEB301"
+    ],
+    "userId": 7890,
+    "username": "Ahmed",
+    "email": "ahmed.m@gmail.com",
+    "passwordHash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "role": "student"
+  },
+  {
+    "enrolledCourses": [
+      "DR202",
+      "ML501"
+    ],
+    "userId": 2345,
+    "username": "Layla",
+    "email": "layla.s@gmail.com",
+    "passwordHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "role": "student"
+  },
+  {
+    "enrolledCourses": [
+      "DB401",
+      "CS101"
+    ],
+    "userId": 6789,
+    "username": "Omar",
+    "email": "omar.h@gmail.com",
+    "passwordHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "role": "student"
+  },
+  {
+    "enrolledCourses": [
+      "WEB301",
+      "ML501"
+    ],
+    "userId": 8901,
+    "username": "Fatima",
+    "email": "fatima.a@gmail.com",
+    "passwordHash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "role": "student"
+  },
+  {
+    "enrolledCourses": [
+      "CS101",
+      "DR202",
+      "WEB301"
+    ],
+    "userId": 3421,
+    "username": "Youssef",
+    "email": "youssef.k@gmail.com",
+    "passwordHash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+    "role": "student"
+  },
+  {
+    "createdCourses": [
+      "CS101",
+      "DR202"
+    ],
     "userId": 9657,
-    "role": "instructor",
     "username": "Ali",
     "email": "ali23@gmail.com",
     "passwordHash": "6a2da3f8f0a0b1d6d3e3c8f7c2a9d5e4f7b8a6c9d4e2f1a3b7c9d8e4f2a6b3c9",
-    "createdCourses": ["CS101","DR202"]
-}
-
+    "role": "instructor"
+  },
+  {
+    "createdCourses": [
+      "WEB301",
+      "DB401",
+      "ML501",
+      "dsf",
+      "dsa"
+    ],
+    "userId": 4398,
+    "username": "moaz",
+    "email": "moaz@gmail.com",
+    "passwordHash": "9874d38de575fe17cc1201d7e7dc2fdd6e5b1c83f3fe43909257009a9073c63c",
+    "role": "instructor"
+  },
+  {
+    "createdCourses": [],
+    "userId": 5521,
+    "username": "Sara",
+    "email": "sara.i@gmail.com",
+    "passwordHash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+    "role": "instructor"
+  },
+  {
+    "createdCourses": [
+      "sdffsdfsd"
+    ],
+    "userId": 456,
+    "username": "moazz",
+    "email": "moazz@gmail.com",
+    "passwordHash": "9874d38de575fe17cc1201d7e7dc2fdd6e5b1c83f3fe43909257009a9073c63c",
+    "role": "instructor"
+  }
 ]
