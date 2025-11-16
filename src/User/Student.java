@@ -8,12 +8,13 @@ public class Student extends User {
     private List<String> enrolledCourses;
 
     // Default constructor required by Gson
-    public Student() {
+    public Student(){
+        super();
         this.enrolledCourses = new ArrayList<>();
     }
 
-    public Student(int id, String name, String password, String role, List<String> courses) {
-        super(id, name, password, role);
+    public Student(int id, String username,String email, String password, List<String> courses) {
+        super(id, username,email, password);
         this.enrolledCourses = courses;
     }
 
@@ -38,3 +39,4 @@ public class Student extends User {
         
     }*/
 }
+
