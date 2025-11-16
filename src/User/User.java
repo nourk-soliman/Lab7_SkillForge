@@ -15,13 +15,13 @@ public class User {
     private String username;
     private String email;
     private String passwordHash;
-    public User(int userId, String username, String email, String passwordHash) {
+    public User(int userId, String userName, String email, String passwordHash) {
         setUserId(userId);
-        setUserName(username);
+        setUserName(userName);
         setEmail(email);
         setPasswordHash(passwordHash);
     }
-    public User(){}
+    public User(){};
     //------------------------ID Validation------------------------//
     public void setUserId(int userId) {
         if (userId <= 0){
@@ -40,7 +40,7 @@ public class User {
             }
         }
 
-        this.username = username;
+        this.username = userName;
     }
 
     //------------------------Emial Validation------------------------//
@@ -108,10 +108,12 @@ public class User {
     public String getUserName() {
         return username;
     }
-      public void displayInfo() {
+    
+    public void displayInfo() {
         System.out.println("User ID: " + userId);
         System.out.println("Username: " + username);
         System.out.println("Email: " + email);
     }
 
 }
+
