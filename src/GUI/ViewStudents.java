@@ -6,9 +6,11 @@ package GUI;
 
 import Json.JsonUserReader;
 import User.Instructor;
+import User.InstructorRole;
 import User.Student;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import GUI.InstructorBoard;
 
 /**
  *
@@ -38,9 +40,12 @@ public class ViewStudents extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        button1 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 255, 255));
 
+        jTable1.setBackground(new java.awt.Color(204, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -54,24 +59,45 @@ public class ViewStudents extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        button1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        button1.setLabel("Home");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+      this.setVisible(false);
+      new InstructorBoard().setVisible(true);
+      
+    }//GEN-LAST:event_button1ActionPerformed
     public void viewStudents(Instructor i)
-    { 
+    { InstructorRole r=new InstructorRole();
         DefaultTableModel d=(DefaultTableModel)jTable1.getModel();
         d.setRowCount(0);
-       List<Student> s= i.viewEnrolledStudents();
+       List<Student> s= r.viewEnrolledStudents(i);
     for(Student student:s)
     {Object[]row= new Object[]{student.getUserId(),student.getUserName()};
     d.addRow(row);
@@ -104,7 +130,7 @@ public class ViewStudents extends javax.swing.JFrame {
      JsonUserReader r=new JsonUserReader("users.json");
         List<Instructor>i=r.getInstructors();
  java.awt.EventQueue.invokeLater(() -> {
-        ViewStudents v = new ViewStudents(i.get(0));   // create ONE instance
+        ViewStudents v = new ViewStudents(i.get(1));   // create ONE instance
         v.setVisible(true);                     // show THAT instance
     });       
         
@@ -117,6 +143,7 @@ public class ViewStudents extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

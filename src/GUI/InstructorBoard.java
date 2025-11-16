@@ -138,7 +138,7 @@ public class InstructorBoard extends javax.swing.JFrame {
           this.setVisible(false);
           JsonUserReader r=new JsonUserReader("users.json");
         List<Instructor>i=r.getInstructors();
-        ViewStudents v=new ViewStudents(i.get(0));
+        ViewStudents v=new ViewStudents(i.get(1));
         v.setVisible(true);
         
     }//GEN-LAST:event_viewActionPerformed
