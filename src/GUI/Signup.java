@@ -266,14 +266,14 @@ public class Signup extends javax.swing.JFrame {
                 }
             } else if (role.contains("Instructor")) {
                 UserProcess r = new UserProcess();
-                Instructor inst = r.validateInstructor(name, password);
+                Instructor inst =r.signupInstructor(name, email, password);
                 if (inst == null) {
-                    JOptionPane.showMessageDialog(null, "Invalid username or password");
+                    JOptionPane.showMessageDialog(null, "Format of one of the feilds is invalid");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Login Successfull");
-                    Instructorboard instructorDashboard = new Instructorboard(inst);
-                    instructorboard.setVisible(true);
-                    this.dispose();*/
+                    JOptionPane.showMessageDialog(null, "Sign up Successfull!");
+                    InstructorBoard instructorDashboard = new InstructorBoard(inst);
+                    instructorDashboard.setVisible(true);
+                    this.dispose();
                 }
             }
         }
