@@ -49,7 +49,7 @@ public class User {
             throw new IllegalArgumentException("Email cannot be empty");
         }
 
-        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9-]+\\.[A-Za-z0-9]+$")) {
             throw new IllegalArgumentException("Invalid email format");
         }
         this.email = email;
@@ -116,4 +116,5 @@ public class User {
     }
 
 }
+
 
