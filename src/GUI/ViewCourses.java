@@ -98,7 +98,7 @@ public class ViewCourses extends javax.swing.JFrame {
     StudentRole S = new StudentRole();
     DefaultTableModel d = (DefaultTableModel) jTable1.getModel();
 
-    // تعديل العناوين علشان نضيف خانة الـ Status
+   
     d.setColumnIdentifiers(new String[]{"ID", "Name", "Status"});
     d.setRowCount(0);
 
@@ -107,7 +107,7 @@ public class ViewCourses extends javax.swing.JFrame {
     for (Course c : allCourses) {
         String status;
 
-        // لو الطالب مسجل الكورس
+       
         if (s.getEnrolledCourses() != null && s.getEnrolledCourses().contains(c)) {
             status = "Enrolled";
         } else {
