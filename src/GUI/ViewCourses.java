@@ -32,6 +32,7 @@ public class ViewCourses extends javax.swing.JFrame {
 
     public void viewCourses(Student s) {
         StudentRole S = new StudentRole();
+        //create a table
         DefaultTableModel d = (DefaultTableModel) jTable1.getModel();
         d.setRowCount(0);
 
